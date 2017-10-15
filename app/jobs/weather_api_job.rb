@@ -11,7 +11,7 @@ class WeatherApiJob < ApplicationJob
       weather_list << Weather.new(
         temperature: weather_json.temperature,
         humidity: weather_json.humidity,
-        timestamp: Time.now,
+        record_time: Time.now,
         city_id: city.id,
       )
     end

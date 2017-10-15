@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.4.2'
+ruby '2.5.1'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -9,7 +9,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -17,10 +17,11 @@ gem 'puma', '~> 3.7'
 
 gem 'openweather2'
 gem 'delayed_job_active_record'
-
 gem 'activerecord-import' # Bulk data insert
 
 gem 'foreman'
+gem 'rufus-scheduler'
+
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -47,6 +48,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'annotate'
+
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

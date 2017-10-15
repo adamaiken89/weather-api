@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  city_id     :integer
-#  timestamp   :datetime
+#  record_time :datetime
 #  temperature :decimal(, )
 #  humidity    :decimal(, )
 #  created_at  :datetime         not null
