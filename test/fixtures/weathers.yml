@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: weathers
+#
+#  id          :integer          not null, primary key
+#  city_id     :integer
+#  timestamp   :datetime
+#  temperature :decimal(, )
+#  humidity    :decimal(, )
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country: one
+  timestamp: 2017-10-15 21:23:53
+  tempature: 9.99
+
+two:
+  country: two
+  timestamp: 2017-10-15 21:23:53
+  tempature: 9.99
