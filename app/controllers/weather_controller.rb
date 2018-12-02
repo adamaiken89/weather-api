@@ -17,15 +17,16 @@ class WeatherController < ApplicationController
       return
     end
 
-    @weathers = Weather.where(city_id: @city.id)
+    weathers = Weather.where(city_id: @city.id)
 
     if start_date
-      @weathers = @weathers.where("? <= record_time", start_date)
+      weathers = weathers.where("? <= record_time", start_date)
     end
     if end_date
-      @weathers = @weathers.where("? >= record_time", end_date)
+      weathers = weathers.where("? >= record_time", end_date)
     end
-    render :json => @weathers.order(record_time: :desc).pluck(:temperature, :humidity, :record_time )
+    
+    render :json => weathers.order(record_time: :desc).pluck(:temperature, :humidity, :record_time )
   end
 
   private
