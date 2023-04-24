@@ -26,6 +26,6 @@ While PostgreSQL is running,
 * `foreman start`
 
 
-* Those important files are 
+Those important files are 
 * `app/controllers/weather_controller.rb`
 * `jobs/weather_api_job.rb`
